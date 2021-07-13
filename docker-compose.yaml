@@ -27,18 +27,6 @@ services:
       KAFKA_RISK_TOPIC: "customer-risk-topic"
       #ayo is this supposed to say customer instead of customer risk topic?
 
-  zookeeper:
-
-    image: 'confluentinc/cp-zookeeper:5.2.2'
-
-    ports:
-
-    - "2181:2181"
-
-    environment:
-
-      ZOOKEEPER_CLIENT_PORT: "2181"
-
  
 
   kafka:
@@ -66,3 +54,16 @@ services:
     depends_on:
 
     - "zookeeper"
+
+  
+  zookeeper:
+
+    image: 'confluentinc/cp-zookeeper:5.2.2'
+
+    ports:
+
+    - "2181:2181"
+
+    environment:
+
+      ZOOKEEPER_CLIENT_PORT: "2181"
