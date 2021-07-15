@@ -49,7 +49,7 @@ services:
     
     ZOOKEEPER_CLIENT_PORT: "2181"
 
-# kafka service
+# kafka service is dependent on zookeeper so zookeeper has to be done first
   kafka:
 
     image: confluentinc/cp-kafka:5.2.2
