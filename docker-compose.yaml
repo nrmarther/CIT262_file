@@ -1,4 +1,5 @@
 # This is our docker-compose file for STEDI...
+# This works now after working 3 times
 
 version: '3.7'
 
