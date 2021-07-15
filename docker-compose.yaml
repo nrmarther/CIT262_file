@@ -7,6 +7,7 @@ version: '3.7'
 
 services:
 
+# This is the server that holds the data.
   redis:
 
     image: redis:6.0.6
@@ -15,6 +16,7 @@ services:
 
     - "6379:6379"
 
+# stedi service
   stedi:
     
     image: scmurdock/stedi
@@ -34,8 +36,8 @@ services:
       KAFKA_BROKER: "kafka:19092"
 
       KAFKA_RISK_TOPIC: "customer-risk-topic"
-      #ayo is this supposed to say customer instead of customer risk topic?
 
+# zookeeper service 
   zookeeper:
 
    image: confluentinc/cp-zookeeper:5.2.2
@@ -48,6 +50,7 @@ services:
     
     ZOOKEEPER_CLIENT_PORT: "2181"
 
+# kafka service
   kafka:
 
     image: confluentinc/cp-kafka:5.2.2
