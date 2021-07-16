@@ -76,3 +76,6 @@ services:
     depends_on:
 
     - "zookeeper"
+
+
+    
